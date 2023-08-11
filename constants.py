@@ -1,0 +1,18 @@
+import time
+timestr = time.strftime("%Y%m%d_%H%M%S")
+
+TQDM_DISABLE = False
+TENSORBOARD_DIR = f'tensorboard/{timestr}'
+IMBALANCE_MULTIPLIER = 50
+MAX_SENTIMENT_SAMPLES = 80*IMBALANCE_MULTIPLIER
+MAX_SIMILARITY_SAMPLES = 30*IMBALANCE_MULTIPLIER
+MAX_CFIMDB_SAMPLES = 100*IMBALANCE_MULTIPLIER
+#MAX_YELP_SAMPLES = 25*IMBALANCE_MULTIPLIER
+MAX_PARAPHRASE_SAMPLES = IMBALANCE_MULTIPLIER
+
+
+# Yelp size - 560,000 examples
+# CFIMDB size - 1,701 examples
+# Sentiment size - 2,210 examples
+# Paraphrase size - 141,506 examples
+# Similarity size  - 6,041 examples
